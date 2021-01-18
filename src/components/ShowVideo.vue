@@ -14,21 +14,17 @@
       torrent: String
     },
     setup(props) {
-      let data = props.torrent;
-
       watch(() =>
-        data,
-        value =>{
-          data = value;
-          let d = data;
-          loadPlayer(d);  
+        props.torrent,
+        value => {
+          loadPlayer(props.torrent);  
         }
       )
 
-      onMounted(()=> loadPlayer(data));
+      onMounted(()=> loadPlayer(props.torrent));
 
       return {
-        data
+        data: props.torrent
       };
     }
   };
