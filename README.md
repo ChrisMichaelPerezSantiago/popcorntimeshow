@@ -13,6 +13,19 @@
          
 <br/>
 
+
+## 📦 Framework & Tools Used
+- [x] *[vuejs](https://vuejs.org/v2/guide/) is a progressive framework for building user interfaces.*
+- [x] *[vue-hooks](https://github.com/u3u/vue-hooks)⚡️Awesome Vue Hooks.*
+- [x] *[vuejs composition api](https://vue-composition-api-rfc.netlify.com/) a set of additive, function-based APIs that allow flexible composition of component logic.*
+- [x] *[electronjs](https://www.electronjs.org/) Electron is a framework for creating native applications with web technologies like JavaScript, HTML, and CSS.*
+- [x] *[Vue CLI Plugin Electron Builder](https://github.com/SimulatedGREG/electron-vue) An Electron & Vue.js quick start boilerplate with vue-cli scaffolding, common Vue plugins, electron-packager/electron-builder, unit/e2e testing, vue-devtools, and webpack*
+- [x] *[electron-updater](https://www.npmjs.com/package/electron-updater) This module allows you to automatically update your application. You only need to install this module and write two lines of code! To publish your updates you just need simple file hosting, it does not require a dedicated server.*
+- [x] *[electron-icon-builder](https://www.npmjs.com/package/electron-icon-builder) An icon generator to generate all the icon files needed for electron packaging*
+- [x] *[adblocker-electron](https://www.npmjs.com/package/@cliqz/adblocker-electron) Electron Adblocker*
+- [x] *[popcorntime api](https://www.npmjs.com/package/popcorntime) No more downloads hassle! The best movies & TV shows, for free! Directly on Popcorn Time API in HD + subtitles.*
+
+
 ## **:handshake: Contributing**
 
 - Fork it!
