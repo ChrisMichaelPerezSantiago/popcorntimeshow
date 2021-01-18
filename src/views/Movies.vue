@@ -11,7 +11,7 @@
               <ul class="nav nav-tabs pre-tabs">
                 <li class="nav-item">
                   <span class="type"><strong>Sort By: </strong></span>
-                  <select v-model="sortBy_selected">
+                  <select v-model="sortBy_selected" class="queries_home_select">
                     <option
                       v-for="(options, index) in sortBy"
                       :value="options"
@@ -23,7 +23,7 @@
                 </li>
                 <li class="nav-item">
                   <span class="type"><strong>Genres: </strong></span>
-                  <select v-model="genres_selected">
+                  <select v-model="genres_selected" class="queries_home_select">
                     <option
                       v-for="(options, index) in genres"
                       :value="options"
@@ -36,6 +36,7 @@
                 <li class="nav-item">
                   <form class="searchForm" v-on:submit.prevent="qf(query)">
                     <input
+                      class="queries_home_select"
                       type="text"
                       v-model="query"
                       placeholder="search movies ..."

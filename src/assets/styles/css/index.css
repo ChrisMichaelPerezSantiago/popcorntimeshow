@@ -19,6 +19,18 @@ body {
 #episode_select{
   width: 8% !important;
   margin-left: 5px;
+  border-radius: 5px;
+  color: orange;
+}
+
+.movie_magnet_select{
+	border-radius: 5px;
+	color: orange;
+}
+
+.queries_home_select{
+	border-radius: 5px;
+	color: orange;
 }
 
 a {

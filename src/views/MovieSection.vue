@@ -166,7 +166,7 @@
             <div id="pc-fav" class="btn btn-sm btn-radius btn-secondary mr-2">
               <i class="fa fa-magnet mr-2"></i>Select Torrent
             </div>
-            <select v-model="torrent_selected">
+            <select v-model="torrent_selected" class="movie_magnet_select">
               <option
                 v-for="(options, index) in data[0][0].torrents.items"
                 :value="options"
