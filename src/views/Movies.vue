@@ -179,7 +179,7 @@ export default {
         page: page.value,
         sortby: sortBy_selected.value,
         genre: genres_selected.value,
-        q: query
+        q: query || ''
       };
       store.value.dispatch("GET_MOVIES_DATA", options);
     };
