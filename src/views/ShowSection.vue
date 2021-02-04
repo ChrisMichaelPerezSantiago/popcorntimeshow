@@ -12,7 +12,7 @@
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
-                <router-link :to="{ name: 'Home' }">Home</router-link>
+                <router-link :to="{ name: 'Home' }">TV Shows</router-link>
               </li>
               <li class="breadcrumb-item active" aria-current="page">
                 {{ data[0][0].title }}
@@ -185,9 +185,19 @@
                         }
                       }"
                     >
-                      <h3 class="film-name">
-                        <div :title="_data.synopsis">{{ _data.title }}</div>
-                      </h3>
+                      <popper trigger="hover" :options="{placement: 'top'}">
+                        <div class="popper">
+                          {{
+                            _data.synopsis && _data.synopsis
+                          }}
+                        </div>
+
+                        <div  slot="reference" class="top">
+                          <h3 class="film-name">
+                            <div>{{ _data.title }}</div>
+                          </h3>
+                        </div>  
+                      </popper>
                     </router-link>
 
                     <p>
@@ -226,9 +236,14 @@
   import { nSQL } from "@nano-sql/core";
   import { useRouter } from "@u3u/vue-hooks";
   import { ref } from "@vue/composition-api";
+  import Popper from 'vue-popperjs';
+  import 'vue-popperjs/dist/vue-popper.css';
 
   export default {
     name: "ShowSection",
+    components:{
+      'popper': Popper
+    },
     setup() {
       const { route } = useRouter();
       const data = ref([]);
