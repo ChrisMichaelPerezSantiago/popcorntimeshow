@@ -233,12 +233,12 @@
 
 
 <script>
-  import { nSQL } from "@nano-sql/core";
   import { useRouter } from "@u3u/vue-hooks";
   import { ref } from "@vue/composition-api";
+  import byId from '../db/queries/byId';
   import Popper from 'vue-popperjs';
   import 'vue-popperjs/dist/vue-popper.css';
-
+  
   export default {
     name: "ShowSection",
     components:{
@@ -246,18 +246,9 @@
     },
     setup() {
       const { route } = useRouter();
-      const data = ref([]);
       const id = ref(route.value.params.id);
 
-      nSQL().useDatabase("popcorntimedb");
-      nSQL("shows");
-      nSQL()
-        .query("select")
-        .where(["ID", "=", id.value])
-        .exec()
-        .then(rows => {
-          data.value.push(rows);
-        });
+      const { data } = byId("shows", id.value);
 
       const season_selected = ref(1);
 

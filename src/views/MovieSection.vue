@@ -205,9 +205,9 @@
 
 
 <script>
-import { nSQL } from "@nano-sql/core";
 import { useRouter } from "@u3u/vue-hooks";
 import { ref } from "@vue/composition-api";
+import byId from "../db/queries/byId";
 import ShowVideo from "../components/ShowVideo";
 
 export default {
@@ -217,18 +217,9 @@ export default {
   },
   setup() {
     const { route } = useRouter();
-    const data = ref([]);
     const id = ref(route.value.params.id);
 
-    nSQL().useDatabase("popcorntimedb");
-    nSQL("movies");
-    nSQL()
-      .query("select")
-      .where(["ID", "=", id.value])
-      .exec()
-      .then(rows => {
-        data.value.push(rows);
-      });
+    const { data } = byId("movies", id.value);
 
     const show = ref(false);
     const torrent_selected = ref(null);
