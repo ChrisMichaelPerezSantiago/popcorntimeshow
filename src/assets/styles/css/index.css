@@ -38,6 +38,7 @@ body {
 .queries_home_select{
 	border-radius: 5px;
 	color: orange;
+	width: 20px;
 }
 
 a {

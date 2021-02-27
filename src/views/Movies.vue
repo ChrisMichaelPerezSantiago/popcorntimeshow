@@ -36,7 +36,6 @@
                 <li class="nav-item">
                   <form class="searchForm" v-on:submit.prevent="qf(query)">
                     <input
-                      class="queries_home_select"
                       type="text"
                       v-model="query"
                       placeholder="search movies ..."
