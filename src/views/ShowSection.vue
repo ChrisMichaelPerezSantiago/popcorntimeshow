@@ -202,7 +202,7 @@
 
                     <p>
                       {{
-                        _data.synopsis && _data.synopsis.substring(0, 100)
+                        _data.synopsis && _data.synopsis.substring(0, 90)
                       }}
                       ...
                     </p>

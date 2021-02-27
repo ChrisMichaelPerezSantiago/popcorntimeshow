@@ -2982,7 +2982,7 @@ a:hover {
 		display: inline-block
 	}
 	.film_list .film_list-wrap .flw-item .film-detail-fix .fd-infor .fdi-type {
-		display: none
+		display: flexbox
 	}
 	.film_list .film_list-wrap .flw-item {
 		width: 46%!important;
