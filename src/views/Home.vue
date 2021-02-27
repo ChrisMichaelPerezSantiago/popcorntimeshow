@@ -158,7 +158,8 @@ export default {
       () => query.value,
       value => {
         query.value = value;
-        qf(query.value);
+        let q = query.value && query.value.trim();
+        qf(q);
       }
     );
 
