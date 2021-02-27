@@ -16,6 +16,13 @@ body {
 	-webkit-text-size-adjust: none
 }
 
+#footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 1.0rem; 
+}
+  
 #episode_select{
   width: 8% !important;
   margin-left: 5px;
